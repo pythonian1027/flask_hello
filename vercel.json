@@ -1,7 +1,20 @@
 {
-  "rewrites": [
-    { 
-	"source": "/(.*)", "destination": "/api/index" 
-	}
+  "name": "my-flask-app",
+  "routes": [
+    {
+      "src": "/webhook",
+      "methods": ["POST"],
+      "dest": "app.webhook"
+    },
+    {
+      "src": "/",
+      "dest": "app.home"
+    }
+  ],
+  "builds": [
+    {
+      "src": "index.py",
+      "use": "@vercel/python"
+    }
   ]
 }
