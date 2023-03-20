@@ -1,13 +1,7 @@
-{  
-  "routes": [
-    {
-      "source": "/webhook",
-      "methods": ["POST"],
-      "destination": "app.webhook"
-    },
-    {
-      "source": "/",
-      "destination": "app.home"
-    }
+{
+  "rewrites": [
+    { 
+	"source": "/(.*)", "destination": "/api/index" 
+	}
   ]
 }
