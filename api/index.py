@@ -2,6 +2,8 @@ from flask import Flask, request, abort
 
 app = Flask(__name__)
 
+messages = []
+
 @app.route('/webhook', methods=['POST'])
 def webhook():
     payload = request.get_json()
@@ -15,7 +17,15 @@ def webhook():
         
 @app.route('/')
 def home():
-    return 'Hello, World 4!'
+    global messages
+    response = ''
+    if messages:
+        response = 'Updates: \n'
+        response += '\n'.join(messages)
+    return response
+    # else:
+    #     response = 'No updates'
+    # return 'Hello, World 4!'
 
 # @app.route('/about')
 # def about():

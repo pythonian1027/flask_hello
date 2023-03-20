@@ -17,6 +17,9 @@ def webhook():
 def home():
     return 'Hello, World 4!'
 
+if __name__ == "__main__":
+    app.run()
+
 # @app.route('/about')
 # def about():
 #     return 'About'
