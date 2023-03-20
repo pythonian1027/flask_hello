@@ -32,6 +32,7 @@ def home():
 def refresh():
     global messages
     messages = []
+    return 200
 
 # @app.route('/about')
 # def about():
