@@ -1,8 +1,13 @@
 {
   "routes": [
+    {
+      "source": "/webhook",
+      "methods": ["POST"],
+      "destination": "app.webhook"
+    },
     { 
-	"source": "/", 
-	"destination": "app.home" 
+    	"source": "/", 
+    	"destination": "app.home" 
 	}
   ]
 }
