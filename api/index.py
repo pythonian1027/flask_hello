@@ -28,6 +28,11 @@ def home():
     return response        
     # return 'Hello, World 4!'
 
+@app.route('/refresh')
+def refresh():
+    global messages
+    messages = []
+
 # @app.route('/about')
 # def about():
 #     return 'About'
