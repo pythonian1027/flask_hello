@@ -10,10 +10,10 @@ def webhook():
     else: 
         abort(400)
         
+@app.route('/')
+def home():
+    return 'Hello, World 4!'
 
-#def home():
-#    return 'Hello, World 3!'
-
-#@app.route('/about')
-#def about():
-#    return 'About'
+@app.route('/about')
+def about():
+    return 'About'
