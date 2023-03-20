@@ -10,11 +10,5 @@
       "src": "/",
       "dest": "app.home"
     }
-  ],
-  "builds": [
-    {
-      "src": "app.py",
-      "use": "@vercel/python"
-    }
   ]
 }
