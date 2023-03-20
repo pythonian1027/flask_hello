@@ -5,10 +5,4 @@
 	}
   ],
   
-  "crons": [
-			{
-				"path": "/api/about",
-				"schedule": "40 20 * * *"
-			}
-		]
 }
