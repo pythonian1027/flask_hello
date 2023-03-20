@@ -3,11 +3,11 @@
     {
       "src": "/webhook",
       "methods": ["POST"],
-      "dest": "/api/app.webhook"
+      "dest": "app.webhook"
     },
     {
       "src": "/",
-      "dest": "/api/app.home"
+      "dest": "app.home"
     }
   ]
 }
