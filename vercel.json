@@ -3,11 +3,11 @@
     {
       "source": "/webhook",
       "methods": ["POST"],
-      "destination": "app.webhook"
+      "destination": "/api/index"
     },
     { 
     	"source": "/", 
-    	"destination": "app.home" 
+    	"destination": "/api/index" 
 	}
   ]
 }
