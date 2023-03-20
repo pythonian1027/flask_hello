@@ -6,12 +6,13 @@ messages = []
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    payload = request.get_json()
-    print ('received')
+    global messages
+    payload = request.get_json()    
     # return 'Webhook received'
     if request.method=='POST':
-        print (request.json)
-        return 'success', 200
+        message = payload['message']
+        messages.append(message)
+        return 'Webhook received successfully', 200
     else: 
         abort(400)
         
@@ -22,9 +23,9 @@ def home():
     if messages:
         response = 'Updates: \n'
         response += '\n'.join(messages)
-    return response
-    # else:
-    #     response = 'No updates'
+    else:
+        response = 'No updates'
+    return response        
     # return 'Hello, World 4!'
 
 # @app.route('/about')
