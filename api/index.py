@@ -4,11 +4,13 @@ app = Flask(__name__)
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
-    if request.method=='POST':
-        print (request.json)
-        return 'success', 200
-    else: 
-        abort(400)
+    payload = request.get_json()
+    return 'Webhook received'
+    # if request.method=='POST':
+    #     print (request.json)
+    #     return 'success', 200
+    # else: 
+    #     abort(400)
         
 @app.route('/')
 def home():
