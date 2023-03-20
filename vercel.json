@@ -1,14 +1,13 @@
-{
-  "name": "my-flask-app",
+{  
   "routes": [
     {
       "src": "/webhook",
       "methods": ["POST"],
-      "dest": "app.webhook"
+      "dest": "/api/app.webhook"
     },
     {
       "src": "/",
-      "dest": "app.home"
+      "dest": "/api/app.home"
     }
   ]
 }
